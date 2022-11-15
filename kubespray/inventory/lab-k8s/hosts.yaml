@@ -1,0 +1,69 @@
+all:
+  vars: 
+    cluster_id: "1.0.0.1"
+    ansible_ssh_private_key_file: ../keys/kubespray
+
+  hosts:
+    # -------- ETCD ---------
+    k8s-lab-etcd-1:
+      ansible_host: 192.168.50.31
+      ip: 192.168.50.31
+      access_ip: 192.168.50.31
+    # k8s-lab-etcd-2:
+    #   ansible_host: 192.168.50.32
+    #   ip: 192.168.50.32
+    #   access_ip: 192.168.50.32
+    # -------- MASTER ---------
+    k8s-lab-master-1:
+      ansible_host: 192.168.50.11
+      ip: 192.168.50.11
+      access_ip: 192.168.50.11
+    # k8s-lab-master-2:
+    #   ansible_host: 192.168.50.12
+    #   ip: 192.168.50.12
+    #   access_ip: 192.168.50.12
+    # -------- NODE ---------
+    k8s-lab-node-1:
+      ansible_host: 192.168.50.21
+      ip: 192.168.50.21
+      access_ip: 192.168.50.21
+    k8s-lab-node-2:
+      ansible_host: 192.168.50.22
+      ip: 192.168.50.22
+      access_ip: 192.168.50.22
+    # -------- CALICO ---------
+    k8s-lab-rr-1:
+      ansible_host: 192.168.50.41
+      ip: 192.168.50.41
+      access_ip: 192.168.50.41
+    # k8s-lab-rr-2:
+    #   ansible_host: 192.168.50.42
+    #   ip: 192.168.50.42
+    #   access_ip: 192.168.50.42
+
+  children:
+    kube-master:
+      hosts:
+        k8s-lab-master-1:
+        # k8s-lab-master-2:
+    kube-node:
+      hosts:
+        k8s-lab-master-1:
+        # k8s-lab-master-2:
+        k8s-lab-node-1:
+        k8s-lab-node-2:
+    etcd:
+      hosts:
+        k8s-lab-etcd-1:
+        # k8s-lab-etcd-2:
+    calico-rr:
+      hosts: 
+        k8s-lab-rr-1:
+        # k8s-lab-rr-2:
+    k8s-cluster:
+      children:
+        kube-master:
+        kube-node:
+        calico-rr:
+
+
