@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+    haproxy:
+        image: haproxy
+        env_file:
+            - ./haproxy/haproxy.env
+        volumes:
+            - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+            - ./haproxy/abuse.lst:/usr/local/etc/haproxy/abuse.lst:ro
+        ports:
+            - "80:80"
+            - "81:81"
+            - "441:441"
+            - "6443:6443"
+            - "443:443"
+            - "8081:8081"
