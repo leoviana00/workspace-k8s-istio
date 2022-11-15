@@ -16,10 +16,12 @@ spec:
         - destination:
             host: nginx-service.demo-istio.svc.cluster.local
             subset: A
-            port:
-              number: 8080
+            # port:
+            #   number: 8080
           weight: 20
         - destination:
             host: nginx-service.demo-istio.svc.cluster.local
             subset: B
+            # port:
+            #   number: 8080
           weight: 80
