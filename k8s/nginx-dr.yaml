@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx-destination-rule
+  namespace: demo-istio
+spec:
+  host: nginx-service.demo-istio.svc.cluster.local
+  subsets:
+    - labels:
+        version: A
+      name: A
+    - labels:
+        version: B
+      name: B
