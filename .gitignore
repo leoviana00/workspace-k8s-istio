@@ -1,0 +1,11 @@
+# Ansible
+site.retry
+*.retry
+**/.retry
+# Editor
+.vscode
+# vagrant
+*.vagrant
+**/.vagrant
+*keys
+**/keys
