@@ -57,4 +57,6 @@
 - LEAST_CONN
 - RANDON
 
-# STICK SESSION e CONSISTENT HASH
+# Stick Session e Consistent Hash
+
+- Estudar
