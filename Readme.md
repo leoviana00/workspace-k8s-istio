@@ -8,7 +8,7 @@
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-etapas">Etapas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-ambiente">Etapas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-referências">Referências</a>
 </p>
@@ -20,11 +20,6 @@
 ## 🌱 Projeto
 
 - Projeto para estudar o gerenciamento de tráfego de dados dentro de um cluster kubernetes utilizando o Istio.
-
-<p align="center">
-    <img style="max-width:800px;" src="https://cdn.loom.com/sessions/thumbnails/4210ac7557d94679ae653a99fd8e2a8c-with-play.gif">
-</p>
-
 
 ## ✨ Tecnologias
 
@@ -39,7 +34,7 @@
 - Virtualbox
 - Ansible
 
-## 🚀 Etapas
+## 🚀 Ambiente
 
 0. [Levantar um balanceador Haproxy](/balanceador/Readme.md)
 1. [Criar chaves ssh para o projeto](/keys/Readme.md)
@@ -48,7 +43,7 @@
 4. [Configurações iniciais no cluster](/k8s/Readme.md)
 5. [Download e instalação do istio](https://istio.io/latest/docs/setup/getting-started/)
 6. [Instalação de alguns addons para ajudar no entendimento, estrutura e integridade da malha](https://istio.io/latest/docs/ops/integrations/)
-7. [Criar uma aplicação nginx para ser utilizado na demonstração de tráfego com istio](/app/Readme.md)
+7. [Criar versões de deployments nginx para ser utilizado na demonstração de tráfego com istio](/app/Readme.md)
 
 ## 📄 Licença
 
