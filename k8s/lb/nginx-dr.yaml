@@ -5,10 +5,16 @@ metadata:
   namespace: demo-istio
 spec:
   host: nginx-lb-service.demo-istio.svc.cluster.local
+  trafficPolicy:
+    loadbalancer:
+      simple: ROUND_ROBIN
   subsets:
-    - labels:
+    - name: V1
+      labels:
         version: A
-      name: A
-    - labels:
-        version: B
-      name: B
+      trafficPolicy:
+        loadbalancer:
+          simple: LEAST_CONN
+    - name: V2    
+      labels:
+        version: B   

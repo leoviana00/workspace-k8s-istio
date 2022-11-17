@@ -4,7 +4,7 @@ metadata:
   name: nginx-lb-a
   namespace: demo-istio
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: nginx-lb
@@ -28,7 +28,7 @@ metadata:
   name: nginx-lb-b
   namespace: demo-istio
 spec:
-  replicas: 1
+  replicas: 8
   selector:
     matchLabels:
       app: nginx-lb

@@ -15,13 +15,9 @@ spec:
       route:
         - destination:
             host: nginx-lb-service.demo-istio.svc.cluster.local
-            subset: A
-            # port:
-            #   number: 8080
+            subset: V1
           weight: 20
         - destination:
             host: nginx-lb-service.demo-istio.svc.cluster.local
-            subset: B
-            # port:
-            #   number: 8080
+            subset: V2
           weight: 80
