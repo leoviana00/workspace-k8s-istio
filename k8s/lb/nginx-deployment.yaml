@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-lb-a
-  namespace: demo-istio
+  namespace: demo-istio-lb
 spec:
   replicas: 4
   selector:
@@ -26,7 +26,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-lb-b
-  namespace: demo-istio
+  namespace: demo-istio-lb
 spec:
   replicas: 8
   selector:

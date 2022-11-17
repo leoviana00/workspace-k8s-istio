@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: nginx-lb-virtualservice
-  namespace: demo-istio
+  namespace: demo-istio-lb
 spec:
   gateways:
     - demo-istio/nginx-lb-gateway

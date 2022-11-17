@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: nginx-lb-destination-rule
-  namespace: demo-istio
+  namespace: demo-istio-lb
 spec:
   host: nginx-lb-service.demo-istio.svc.cluster.local
   trafficPolicy:

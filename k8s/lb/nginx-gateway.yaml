@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: nginx-lb-gateway
-  namespace: demo-istio
+  namespace: demo-istio-lb
 spec:
   selector:
     app: istio-ingressgateway
