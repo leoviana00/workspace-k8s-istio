@@ -5,7 +5,7 @@ metadata:
   namespace: demo-istio-lb
 spec:
   gateways:
-    - demo-istio/nginx-lb-gateway
+    - demo-istio-lb/nginx-lb-gateway
   hosts:
     - lab.k8s.io
   http:
@@ -14,10 +14,10 @@ spec:
             prefix: /
       route:
         - destination:
-            host: nginx-lb-service.demo-istio.svc.cluster.local
-            subset: V1
+            host: nginx-lb-service.demo-istio-lb.svc.cluster.local
+            subset: v1
           weight: 20
         - destination:
-            host: nginx-lb-service.demo-istio.svc.cluster.local
-            subset: V2
+            host: nginx-lb-service.demo-istio-lb.svc.cluster.local
+            subset: v2
           weight: 80

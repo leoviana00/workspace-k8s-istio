@@ -4,17 +4,17 @@ metadata:
   name: nginx-lb-destination-rule
   namespace: demo-istio-lb
 spec:
-  host: nginx-lb-service.demo-istio.svc.cluster.local
+  host: nginx-lb-service.demo-istio-lb.svc.cluster.local
   trafficPolicy:
-    loadbalancer:
+    loadBalancer:
       simple: ROUND_ROBIN
   subsets:
-    - name: V1
+    - name: v1
       labels:
         version: A
       trafficPolicy:
-        loadbalancer:
+        loadBalancer:
           simple: LEAST_CONN
-    - name: V2    
+    - name: v2    
       labels:
         version: B   
