@@ -1,0 +1,27 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-lb-virtualservice
+  namespace: demo-istio
+spec:
+  gateways:
+    - demo-istio/nginx-lb-gateway
+  hosts:
+    - lab.k8s.io
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: nginx-lb-service.demo-istio.svc.cluster.local
+            subset: A
+            # port:
+            #   number: 8080
+          weight: 20
+        - destination:
+            host: nginx-lb-service.demo-istio.svc.cluster.local
+            subset: B
+            # port:
+            #   number: 8080
+          weight: 80

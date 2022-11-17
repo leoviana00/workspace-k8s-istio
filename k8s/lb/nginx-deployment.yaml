@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-lb-a
+  namespace: demo-istio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-lb
+  template:
+    metadata:
+      labels:
+        app: nginx-lb
+        version: A
+    spec:
+      containers:
+      - name: nginx-lb
+        image: leoviana00/nginx-web-server:a
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-lb-b
+  namespace: demo-istio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-lb
+  template:
+    metadata:
+      labels:
+        app: nginx-lb
+        version: B
+    spec:
+      containers:
+      - name: nginx-lb
+        image: leoviana00/nginx-web-server:b
+        ports:
+        - containerPort: 80
