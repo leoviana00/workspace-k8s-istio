@@ -8,3 +8,11 @@
 5. ansible-playbook -i inventory/lab-k8s/hosts.yaml  --become -u vagrant --become-user=root cluster.yml
 
 [Kebespray Readme ](/src/kubespray/README.md)
+
+## Configurar KUBCTL
+
+```bash
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
