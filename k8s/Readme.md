@@ -7,7 +7,7 @@
 ## Etapas
 
 - Configurações iniciais do cluster
-- Dashboar com lens
+- Dashboard com lens
 - Deployar serviço exemplo aplicando regras de prioridade de requisição utilizando `vs` e `dr`
-- Deployar serviço exemplo aplicando regras de traffic policy na `dr` e `subsets`
+- Deployar serviço exemplo aplicando regras de traffic policy - `loadbalancer` na `dr` e `subsets`
 
