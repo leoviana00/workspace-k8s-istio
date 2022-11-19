@@ -53,6 +53,9 @@
     - Timeout
 
 3. Destination Rules
+
+- `Destination Rues` você pode pensar no Virtual Service como uma forma que você tem  para rotear o tráfego para um destino, então você utiliza as `destinations rules` para configurar o que acontece com o tráfego quando ele chega naquele destino.
+
     - Selector
     - Tipo de Loadbalancer
     - Locality
@@ -65,6 +68,54 @@
 <p align="center">
     <img style="max-width:800px;" src="https://cdn.loom.com/sessions/thumbnails/4210ac7557d94679ae653a99fd8e2a8c-with-play.gif">
 </p>
+
+- Virtual Service
+    - O serviço virtual a seguir roteia as solicitações para diferentes versões de um serviço, onde um subset está configurado para receber 20% das requisições e o outro para receber 80%.
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-virtualservice
+  namespace: demo-istio
+spec:
+  gateways:
+    - demo-istio/nginx-gateway
+  hosts:
+    - lab.k8s.io
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: nginx-service.demo-istio.svc.cluster.local
+            subset: A
+          weight: 20
+        - destination:
+            host: nginx-service.demo-istio.svc.cluster.local
+            subset: B
+          weight: 80
+```
+
+- Destination Rule
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx-destination-rule
+  namespace: demo-istio
+spec:
+  host: nginx-service.demo-istio.svc.cluster.local
+  subsets:
+    - labels:
+        version: A
+      name: A
+    - labels:
+        version: B
+      name: B
+```
 
 ## Prática 2: Tipos de Load Balancer
 
