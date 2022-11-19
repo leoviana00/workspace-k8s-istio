@@ -36,7 +36,16 @@
     - Ingress Gateway
     - Egress Gateway
 
+- `Gateway` é um recurso usado para gerenciar o tráfego de entrada e saída dentro e fora da `malha de serviço`. Normalmente ele é configurado para permitir o tráfego de entrada de fontes de fora da malha.
+
+- Esse componente recebe requisições de fora do Cluster, muito parecido com o `ingress do kubernetes`, porém o ingress do kubernetes tem funcionalidades que o tornam muito simples, já o `ingress do istio` ele trabalha no layer de 4 a 6, basicamente o que ele faz e deixar todas as requisições chegarem através de im ip na porta 80 e porta 443 por exemplo. Garante o gerenciamento de portas, host e TLS. 
+
+- Ele não é responsável pelo roteamento do tráfego, não realiza esse tipo de rotemento de borda. Ele é conectado diretamente ao `virtual service` que já se responsabiliza pelo roteamento.
+
 2. Virtual Service
+
+- `Virtual Service` permite você configurar como as requisições são roteadas para um serviço. Ela possui uma série de regras que quando aplicadas farão com que as requisições sejam direcionadas ao destino correto.
+    
     - Match - Roteamento de tráfego
     - Subsets
     - Fault Injection
@@ -65,7 +74,20 @@
 
 ## Prática 3: Consistent Hash
 
-- Estudar
+- Conceito interessante que o `istio` tem que pode ajudar a fazer testes, algumas provas de conceito com versões diferentes que podemos querer colocar por exemplo em produção.
+
+- Situação problema:
+```console
+- Imaginando que temos uma applicação xpto com duas versões, v1 e v2. No app de versão:v1 aparece uma logo de cor verde e na versão:v2 aparece uma logo de cor amarela, imaginando que ao acessar a aplicação eu chego na versão:v1 aparecendo a logo verde, porém logo em seguida quand for dado um refresh, serei encaminhado para a versão:v2 dando de cara com uma logo de cor amarela, e dessa forma sempre que tiver um refresh serei mandado para app de versões diferentes tendo a logo trocando de cor sempre. 
+
+- Baseado nisso, como fazer com que um usuário uma vez que ele acesse por exemplo a versão:v1, todas as outras vezes ele consiga sempre chegar somente na versão:v1 não sendo mais direcionado para a versão:v2
+```
+
+- Um recurso conhecido para resolver esse problema é o Stick Session, uma sessão que pode se dizer que fica grudada no loadbalancer para ele saber para qual lado mandar determinada requisição.
+
+- O Istio ele tem um esquema para que se possa fazer algo parecido com isso, ele não tem necessariamente uma Stick Session embutida, mas sim um recurso chamado `consistent hash`.
+
+
 
 ## Prática 4: Fault Injection
 
