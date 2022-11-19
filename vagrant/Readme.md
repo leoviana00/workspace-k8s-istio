@@ -59,12 +59,18 @@ end
 
 2. Subir as vms
 
-<p align="center">
-  <img alt="vagrantfile" src="../images/vagrant-run.png">
-</p>
+```bash
+vagrant up
+```
 
 3. Destruir as vms
 
-<p align="center">
-  <img alt="vagrantfile" src="../images/vagrant-destroy.png">
-</p>
+```bash
+vagrant destroy -f
+```
+
+4. Parar as vms
+
+```bash
+vagrant halt
+```
