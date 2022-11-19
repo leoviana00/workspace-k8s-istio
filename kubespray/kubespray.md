@@ -9,7 +9,7 @@
 
 [Kebespray Readme ](/src/kubespray/README.md)
 
-## Configurar KUBCTL
+## Configurar KUBECTL
 
 ```bash
 mkdir -p $HOME/.kube
