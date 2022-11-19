@@ -43,7 +43,7 @@
 4. [Configurações iniciais no cluster](/k8s/Readme.md)
 5. [Download e instalação do istio](/istio/Readme.md)
 6. [Instalação de alguns addons para ajudar no entendimento, estrutura e integridade da malha](https://istio.io/latest/docs/ops/integrations/)
-7. [Criar versões de deployments nginx para ser utilizado na demonstração de tráfego com istio](/app/Readme.md)
+7. [Criar, conteinerizar e publicar imagens nginx para ser utilizado no deploy da demonstração de tráfego com istio](/app/Readme.md)
 
 ## 📄 Licença
 
