@@ -6,29 +6,30 @@
 
 ## Configurações
 
-- Configurações iniciais do cluster
-  1. [ Acessar VM - Master](/vagrant/Readme.md)
-  2. Configurar o `kubectl`
+1. Configurações iniciais do cluster
+  - [ Acessar VM - Master](/vagrant/Readme.md)
+  - Configurar o `kubectl`
 
     ```bash
     mkdir -p $HOME/.kube
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
     ```
-- Dashboard com lens
-  1. [ Acessar VM - Master](/vagrant/Readme.md)
-  2. Copiar o admin.conf
+2. Dashboard com lens
+  - [ Acessar VM - Master](/vagrant/Readme.md)
+  - Copiar o admin.conf
 
     ```bash
     sudo cat /etc/kubernetes/admin.conf
     ```
-  3. [Ter o lens instalado](https://k8slens.dev/)
-  4. Copiar o arquivo admin.conf para o lens
+  - [Ter o lens instalado](https://k8slens.dev/)
+  - Copiar o arquivo admin.conf para o lens
 
 ## Deployments file
 
-  - weight
+1. weight
     - Aplicando regras de prioridade de requisição utilizando `vs` e `dr`
-  - loadbalancer
+    
+2. loadbalancer
     - Aplicando regras de traffic policy - `loadbalancer` na `dr` e `subsets`
 
