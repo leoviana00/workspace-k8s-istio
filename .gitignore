@@ -7,5 +7,3 @@ site.retry
 # vagrant
 *.vagrant
 **/.vagrant
-*keys
-**/keys
