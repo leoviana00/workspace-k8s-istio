@@ -38,7 +38,7 @@
   #Listen Stats
   LISTEN=*
   STATS=enable
-  STATSLP=admin:haproxy
+  STATSLP=admin:admin
   STATSURI=/stats
   STATSSHOW=Praticando Haproxy
   ABUSERS=/etc/haproxy/abuse.lst
