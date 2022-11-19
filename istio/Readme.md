@@ -63,6 +63,8 @@
 
 ## Prática 1: Pesos de prioridade nas requisições
 
+- [Deployments utilizado para a demonstração](/k8s/weight/Readme.md)
+
 - Acompanhamento do tráfego simulando pesos de prioridade nas requisições aos workloads através da dashboard no `Kiali`
 
 <p align="center">
@@ -119,9 +121,67 @@ spec:
 
 ## Prática 2: Tipos de Load Balancer
 
-- ROUND_ROBIN (Padrão)
-- LEAST_CONN
-- RANDON
+- [Deployments utilizados na demonstração](/k8s/loadbalancer/Readme.md)
+
+- Utilizando o trafficPolicy para balancear requisições na minha `destination rule` e dentro da `subset`.
+
+- Virtual Srvice
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-lb-virtualservice
+  namespace: demo-istio-lb
+spec:
+  gateways:
+    - demo-istio-lb/nginx-lb-gateway
+  hosts:
+    - lab.k8s.io
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: nginx-lb-service.demo-istio-lb.svc.cluster.local
+            subset: v1
+          weight: 90
+        - destination:
+            host: nginx-lb-service.demo-istio-lb.svc.cluster.local
+            subset: v2
+          weight: 10
+```
+
+- Destination Rule
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx-lb-destination-rule
+  namespace: demo-istio-lb
+spec:
+  host: nginx-lb-service.demo-istio-lb.svc.cluster.local
+  trafficPolicy:
+    loadBalancer:
+      simple: ROUND_ROBIN
+  subsets:
+    - name: v1
+      labels:
+        version: A
+      trafficPolicy:
+        loadBalancer:
+          simple: LEAST_CONN
+    - name: v2    
+      labels:
+        version: B   
+```
+
+- Tpos de algoritmos: 
+    - `ROUND_ROBIN`: Algoritmo padrão utilizado, mantém a mesma quantidade de requisições entre os pods.
+    - `LEAST_CONN`: Direciona sempre para o pod que recebeu menos requisição.
+    - `RANDON`: Manda requisição de forma aleatória
 
 ## Prática 3: Consistent Hash
 
