@@ -76,7 +76,7 @@
 
 ## Prática
 
-1. Prática 1: Pesos de prioridade nas requisições
+1. Prática: Pesos de prioridade nas requisições
 
 - [Deployments utilizado para a demonstração](/k8s/weight/Readme.md)
 
@@ -134,7 +134,7 @@ spec:
       name: B
 ```
 
-## Prática 2: Tipos de Load Balancer
+2. Prática: Tipos de Load Balancer
 
 - [Deployments utilizados na demonstração](/k8s/loadbalancer/Readme.md)
 
@@ -198,7 +198,7 @@ spec:
     - `LEAST_CONN`: Direciona sempre para o pod que recebeu menos requisição.
     - `RANDON`: Manda requisição de forma aleatória
 
-2. Prática 3: Consistent Hash
+3. Prática: Consistent Hash
 
 - Conceito interessante que o `istio` tem que pode ajudar a fazer testes, algumas provas de conceito com versões diferentes que podemos querer colocar por exemplo em produção.
 
@@ -215,10 +215,10 @@ spec:
 
 
 
-3. Prática 4: Fault Injection
+4. Prática: Fault Injection
 
 - Estudar
 
-4. Prática 5: Circuit Braker
+5. Prática: Circuit Braker
 
 - Estudar
