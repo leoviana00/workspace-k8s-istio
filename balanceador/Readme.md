@@ -118,10 +118,6 @@
 
   ```
 
-<p align="center">
-  <img alt="Balanceador" src="../images/lb-haproxy.png">
-</p>
-
 ## Comandos
 
 - Subindo o balanceador
@@ -141,3 +137,9 @@ docker-compose down
 ```bash
 docker-compose restart
 ```
+
+- Haproxy Dashboard
+
+<p align="center">
+  <img alt="Dashboard" src="../images/lb-haproxy.png">
+</p>
