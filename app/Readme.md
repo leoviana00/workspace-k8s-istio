@@ -1,15 +1,22 @@
 <h1 align="center">Docker - Nginx </h1>
 
 <p align="center">
+  <a href="#serviços">Serviços</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#dockerfile">Dockerfile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#build">Build</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#push">Push</a>
+</p>
+
+<p align="center">
   <img alt="k8s" src="../images/docker-nginx.png">
 </p>
 
 
-## Services
+## Serviços
 
 - Criar dois services para utilizar nos testes
 
-## Etapas
+## Dockerfile
 
 - Criar `Dockerfile` para os serviços
 
@@ -34,6 +41,8 @@
     echo "Service B" >> index.html
     ```
 
+## Build
+
 - Buildar duas imagens com versões diferentes uma da outra
 
     - Service A
@@ -49,6 +58,9 @@
     cd service-b
     docker build -t leoviana00/nginx-web-server:b
     ```
+
+## Push
+
 - Adicionar a um repositório de imagens
  
     - Logar no docker hub
