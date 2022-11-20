@@ -1,3 +1,16 @@
+<h1 align="center">Istio</h1>
+
+<p align="center">
+  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tráfego">Tráfego</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-componentes">Componentes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-prática">Prática</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
+  <img alt="Istio" src="../images/istio.png">
+</p>
+
 ## Instalação
 
 - [Documentação Instalação do Istio](https://istio.io/latest/docs/setup/getting-started/)
@@ -15,7 +28,7 @@
 - [Addons Instio](https://istio.io/latest/docs/ops/integrations/)
     - Dashboard visualização
 
-## Gerenciamento de tráfego com o Istio, ponstos a estudar:
+## Tráfego:
 
 1. Conceitos básicos: 
     - Gateway
@@ -30,7 +43,7 @@
     - Fault Injection
     - Circuit Braker
 
-## Entendendo componentes básicos do istio
+## Componentes
 
 1. Gateway
     - Ingress Gateway
@@ -61,7 +74,9 @@
     - Locality
     - Circuit Break
 
-## Prática 1: Pesos de prioridade nas requisições
+## Prática
+
+1. Prática 1: Pesos de prioridade nas requisições
 
 - [Deployments utilizado para a demonstração](/k8s/weight/Readme.md)
 
@@ -183,7 +198,7 @@ spec:
     - `LEAST_CONN`: Direciona sempre para o pod que recebeu menos requisição.
     - `RANDON`: Manda requisição de forma aleatória
 
-## Prática 3: Consistent Hash
+2. Prática 3: Consistent Hash
 
 - Conceito interessante que o `istio` tem que pode ajudar a fazer testes, algumas provas de conceito com versões diferentes que podemos querer colocar por exemplo em produção.
 
@@ -200,10 +215,10 @@ spec:
 
 
 
-## Prática 4: Fault Injection
+3. Prática 4: Fault Injection
 
 - Estudar
 
-## Prática 5: Circuit Braker
+4. Prática 5: Circuit Braker
 
 - Estudar
