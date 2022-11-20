@@ -1,7 +1,7 @@
 <h1 align="center">Balanceador Haproxy</h1>
 
 <p align="center">
-  <img alt="Balanceador" src="../images/lb-haproxy.png">
+  <img alt="Balanceador" src="../images/haproxy.png">
 </p>
 
 
@@ -112,6 +112,10 @@
       server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check 
 
   ```
+
+<p align="center">
+  <img alt="Balanceador" src="../images/lb-haproxy.png">
+</p>
 
 ## Comandos
 
