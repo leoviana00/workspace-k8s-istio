@@ -1,11 +1,16 @@
 <h1 align="center">Balanceador Haproxy</h1>
 
 <p align="center">
+  <a href="#compose">Compose</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#comandos">Comandos</a>
+</p>
+
+<p align="center">
   <img alt="Balanceador" src="../images/haproxy.png">
 </p>
 
 
-## Etapas
+## Compose
 
 - Criação de um docker-compose para subir um balanceador haproxy
 
