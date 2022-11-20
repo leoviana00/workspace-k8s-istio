@@ -1,10 +1,10 @@
 <h1 align="center">Istio</h1>
 
 <p align="center">
-  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tráfego">Tráfego</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-componentes">Componentes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-prática">Prática</a>
+  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tráfego">Tráfego</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#componentes">Componentes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#prática">Prática</a>
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@
 - [Addons Instio](https://istio.io/latest/docs/ops/integrations/)
     - Dashboard visualização
 
-## Tráfego:
+## Tráfego
 
 1. Conceitos básicos: 
     - Gateway
