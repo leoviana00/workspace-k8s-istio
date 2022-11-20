@@ -1,11 +1,27 @@
+<h1 align="center">Vagrand - Virtualbox</h1>
+
+<p align="center">
+  <a href="#ambiente">Ambiente</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologia">Tecnologia</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#vagrantfile">Vagrantfile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#comandos">Comandos</a>
+</p>
+
+<p align="center">
+  <img alt="Vagant" src="../images/vagrant.jpg">
+</p>
+
 ## Ambiente
+
 - Levantando as máquinas virtuais
 
 ## Tecnologia
+
 - Vagrant
 - Virtuabox
 
-## Etapas
+## Vagrantfile
+
 - Criar um vagrantfile com a arquitetura necessário para subir um cluster kubernetes
 - vagrany up (Subir as vms)
 - vagrant destroy (Derrubar o ambiente)
@@ -57,19 +73,21 @@ end
     - 1 calico 2 x 2
 ```
 
-2. Subir as vms
+## Comandos
+
+- Subir as vms
 
 ```bash
 vagrant up
 ```
 
-3. Destruir as vms
+- Destruir as vms
 
 ```bash
 vagrant destroy -f
 ```
 
-4. Parar as vms
+- Parar as vms
 
 ```bash
 vagrant halt
