@@ -207,8 +207,13 @@ spec:
 - Requisição: 
 
 ```bash
-while true; do sleep 0.5; curl http://lab.k8s.io; echo -e '\n'$(date);done
+while true; do sleep 0.5; curl http://lab.k8s.io/lb; echo -e '\n'$(date);done
 ```
+<p align="center">
+  <img alt="lb" src="../images/istio-lb.png">
+</p>
+
+
 
 3. Prática: Consistent Hash
 
