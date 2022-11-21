@@ -134,6 +134,12 @@ spec:
       name: B
 ```
 
+- Requisição: 
+
+```bash
+while true; do sleep 0.5; curl http://lab.k8s.io; echo -e '\n'$(date);done
+```
+
 2. Prática: Tipos de Load Balancer
 
 - [Deployments utilizados na demonstração](/k8s/loadbalancer/Readme.md)
@@ -197,6 +203,12 @@ spec:
     - `ROUND_ROBIN`: Algoritmo padrão utilizado, mantém a mesma quantidade de requisições entre os pods.
     - `LEAST_CONN`: Direciona sempre para o pod que recebeu menos requisição.
     - `RANDON`: Manda requisição de forma aleatória
+
+- Requisição: 
+
+```bash
+while true; do sleep 0.5; curl http://lab.k8s.io; echo -e '\n'$(date);done
+```
 
 3. Prática: Consistent Hash
 
