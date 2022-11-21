@@ -273,13 +273,19 @@ spec:
         app: nginx-hash
 ```
 
-- Requisição normal: curl http:lab.k8s.io/hash
+- Requisição normal: 
+```bash
+while true; do sleep 0.1; curl http://lab.k8s.io/hash; echo -e '\n'$(date);done
+```
 
 <p align="center">
   <img alt="hash" src="../images/consistenthash-1.png">
 </p>
 
-- Requisição passando o x-user: curl --header "x-user:leo" http:lab.k8s.io/hash
+- Requisição passando o x-user: 
+```bash
+while true; do sleep 0.1; curl --header "x-user:leo" http://lab.k8s.io/hash; echo -e '\n'$(date);done
+```
 
 <p align="center">
   <img alt="hash" src="../images/consistenthash-2.png">
