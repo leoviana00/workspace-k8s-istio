@@ -107,14 +107,35 @@
 
       acl dns_nginx hdr(host) -i lab.k8s.io
 
+      # config app teste weight
       acl path_nginx path_beg -i /
-      use_backend service_nginx if dns_nginx path_nginx
+      use_backend nginx_weight if dns_nginx path_nginx
 
-  backend service_nginx
+      # config app teste consistenthash
+      acl path_nginx_hash path_beg -i /hash
+      use_backend nginx_consistenthash if dns_nginx path_nginx_hash
+
+      # config app teste loadbalancer
+      acl path_nginx_lb path_beg -i /lb
+      use_backend nginx_loadbalancer if dns_nginx path_nginx_lb
+
+  backend nginx_weight
       mode http
       option forwardfor
       balance leastconn
       server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check 
+
+  backend nginx_consistenthash
+      mode http
+      option forwardfor
+      balance leastconn
+      server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check 
+
+  backend nginx_loadbalancer
+      mode http
+      option forwardfor
+      balance leastconn
+      server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check  
 
   ```
 
