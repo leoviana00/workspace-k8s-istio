@@ -301,6 +301,10 @@ while true; do sleep 0.1; curl --header "x-user:leo" http://lab.k8s.io/hash; ech
 
 - Colocar uma injeção de falha para simular problemas no sitema
 
+<p align="center">
+  <img alt="Fault Injection" src="../images/fault-injection.png">
+</p>
+
 5. Prática: Circuit Braker
 
 - Estudar
