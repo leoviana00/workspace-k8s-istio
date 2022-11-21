@@ -291,6 +291,12 @@ while true; do sleep 0.1; curl --header "x-user:leo" http://lab.k8s.io/hash; ech
   <img alt="hash" src="../images/consistenthash-2.png">
 </p>
 
+- Kiali Dashboard
+
+<p align="center">
+  <img alt="Istio" src="../images/kiali-istio.png">
+</p>
+
 4. Prática: Fault Injection
 
 - Estudar
