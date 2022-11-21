@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx-lb
-        image: leoviana00/nginx-web-server:a
+        image: leoviana00/nginx-loadbalancer-service:a
         ports:
         - containerPort: 80
 
@@ -28,7 +28,7 @@ metadata:
   name: nginx-lb-b
   namespace: demo-istio-lb
 spec:
-  replicas: 8
+  replicas: 2
   selector:
     matchLabels:
       app: nginx-lb
@@ -40,6 +40,6 @@ spec:
     spec:
       containers:
       - name: nginx-lb
-        image: leoviana00/nginx-web-server:b
+        image: leoviana00/nginx-loadbalancer-service:b
         ports:
         - containerPort: 80

@@ -11,13 +11,17 @@ spec:
   http:
     - match:
         - uri:
-            prefix: /
+            prefix: /lb
       route:
         - destination:
             host: nginx-lb-service.demo-istio-lb.svc.cluster.local
             subset: v1
+            port:
+              number: 8080
           weight: 90
         - destination:
             host: nginx-lb-service.demo-istio-lb.svc.cluster.local
             subset: v2
+            port:
+              number: 8080
           weight: 10
