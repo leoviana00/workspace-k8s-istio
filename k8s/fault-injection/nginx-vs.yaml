@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-fault-injection-virtualservice
+  namespace: demo-istio-fault-injection
+spec:
+  gateways:
+    - demo-istio-fault-injection/nginx-fault-injection-gateway
+  hosts:
+    - lab.k8s.io
+  http:
+    - match:
+        - uri:
+            prefix: /injection
+      route:
+        - destination:
+            host: nginx-fault-injection-service.demo-istio-fault-injection.svc.cluster.local
+            subset: all
+

@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx-fault-injection-destination-rule
+  namespace: demo-istio-fault-injection
+spec:
+  host: nginx-fault-injection-service.demo-istio-fault-injection.svc.cluster.local
+  trafficPolicy:
+    loadBalancer:
+      consistentHash:
+        httpHeaderName: "x-user"
+  subsets:
+    - name: all
+      labels:
+        app: nginx-fault-injection

@@ -299,7 +299,7 @@ while true; do sleep 0.1; curl --header "x-user:leo" http://lab.k8s.io/hash; ech
 
 4. Prática: Fault Injection
 
-- Estudar
+- Colocar uma injeção de falha para simular problemas no sitema
 
 5. Prática: Circuit Braker
 

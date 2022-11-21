@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-fault-injection-a
+  namespace: demo-istio-fault-injection
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-fault-injection
+  template:
+    metadata:
+      labels:
+        app: nginx-fault-injection
+        version: A
+    spec:
+      containers:
+      - name: nginx-fault-injection
+        image: leoviana00/nginx-fault-injection-service:a
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-fault-injection-b
+  namespace: demo-istio-fault-injection
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-fault-injection
+  template:
+    metadata:
+      labels:
+        app: nginx-fault-injection
+        version: B
+    spec:
+      containers:
+      - name: nginx-fault-injection
+        image: leoviana00/nginx-fault-injection-service:b
+        ports:
+        - containerPort: 80
