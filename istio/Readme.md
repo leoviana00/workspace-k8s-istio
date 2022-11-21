@@ -213,7 +213,60 @@ spec:
 
 - O Istio ele tem um esquema para que se possa fazer algo parecido com isso, ele não tem necessariamente uma Stick Session embutida, mas sim um recurso chamado `consistent hash`.
 
+- Virtual Service
 
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-hash-virtualservice
+  namespace: demo-istio-hash
+spec:
+  gateways:
+    - demo-istio-hash/nginx-hash-gateway
+  hosts:
+    - lab.k8s.io
+  http:
+    - match:
+        - uri:
+            prefix: /hash
+      route:
+        - destination:
+            host: nginx-hash-service.demo-istio-hash.svc.cluster.local
+            subset: all
+```
+
+- Destination Rule
+
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx-hash-destination-rule
+  namespace: demo-istio-hash
+spec:
+  host: nginx-hash-service.demo-istio-hash.svc.cluster.local
+  trafficPolicy:
+    loadBalancer:
+      consistentHash:
+        httpHeaderName: "x-user"
+  subsets:
+    - name: all
+      labels:
+        app: nginx-hash
+```
+
+- Requisição normal: curl http:lab.k8s.io/hash
+
+<p align="center">
+  <img alt="hash" src="../images/consistenthash-1.png">
+</p>
+
+- Requisição passando o x-user: curl --header "x-user:leo" http:lab.k8s.io/hash
+
+<p align="center">
+  <img alt="hash" src="../images/consistenthash-2.png">
+</p>
 
 4. Prática: Fault Injection
 
