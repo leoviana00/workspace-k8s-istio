@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-hash-a
+  namespace: demo-istio-hash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-hash
+  template:
+    metadata:
+      labels:
+        app: nginx-hash
+        version: A
+    spec:
+      containers:
+      - name: nginx-hash
+        image: leoviana00/nginx-hash-service:a
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-hash-b
+  namespace: demo-istio-hash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-hash
+  template:
+    metadata:
+      labels:
+        app: nginx-hash
+        version: B
+    spec:
+      containers:
+      - name: nginx-hash
+        image: leoviana00/nginx-hash-service:b
+        ports:
+        - containerPort: 80

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-hash-service
+  namespace: demo-istio-hash
+spec:
+  selector:
+    app: nginx-hash
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 80
+    protocol: TCP
