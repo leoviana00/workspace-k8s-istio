@@ -1,6 +1,14 @@
 <h1 align="center">Praticando Gerenciamento de tráfego com o Istio</h1>- Kiali Dashboard
 
 <p align="center">
+  <a href="#serviços">Serviços</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#weight">Weight</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#loadbalancer">Loadbalancer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#consistent-hash">Consistent Hash</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#fault-injection">Fault Injection</a>
+</p>
+
+<p align="center">
   <img alt="Istio" src="../images/kiali-istio.png">
 </p>
 
