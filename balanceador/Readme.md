@@ -119,6 +119,10 @@
       acl path_nginx_lb path_beg -i /lb
       use_backend nginx_loadbalancer if dns_nginx path_nginx_lb
 
+      # config app teste fault-injection
+      acl path_nginx_injection path_beg -i /injection
+      use_backend nginx_injection if dns_nginx path_nginx_injection
+
   backend nginx_weight
       mode http
       option forwardfor
@@ -135,7 +139,13 @@
       mode http
       option forwardfor
       balance leastconn
-      server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check  
+      server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check 
+
+  backend nginx_injection
+      mode http
+      option forwardfor
+      balance leastconn
+      server RR_K8S "${SERVER}.11:${PORT_INGRESS_ISTIO}" check 
 
   ```
 
