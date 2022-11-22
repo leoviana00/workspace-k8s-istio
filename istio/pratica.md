@@ -70,7 +70,7 @@
     while true; do sleep 0.5; curl http://lab.k8s.io; echo -e '\n'$(date);done
     ```
 
-## LOadbalancer
+## Loadbalancer
 
 - Prática: Tipos de Load Balancer
 
