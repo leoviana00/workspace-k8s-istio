@@ -5,7 +5,7 @@
   <a href="#loadbalancer">Loadbalancer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#consistent-hash">Consistent Hash</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#fault-injection">Fault Injection</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#circuit-breakern">Circuit Breaker</a>
+  <a href="#circuit-breaker">Circuit Breaker</a>
 </p>
 
 <p align="center">
