@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Istio" src="../images/kiali-istio.png">
+<img style="max-width:800px;" src="https://cdn.loom.com/sessions/thumbnails/0edd98fefae14778a7efbf08ab1f0278-with-play.gif">
 </p>
 
 ## Weight
