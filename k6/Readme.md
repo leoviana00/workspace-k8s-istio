@@ -3,7 +3,7 @@
 | Nome da métrica | Contador | Descrição |
 | --- | --- | --- |
 | http_reqs | Contador | Quantos pedidos HTTP totais k6 gerou | 
-| http_req_blocked | Rate | Tempo gasto bloqueado (aguardando um slot de conexão TCP livre) antes de iniciar a solicitação. Flutuador
+| http_req_blocked | Trend | Tempo gasto bloqueado (aguardando um slot de conexão TCP livre) antes de iniciar a solicitação. Flutuador
 | http_req_connecting | Trend | Tempo gasto estabelecendo conexão TCP com host remoto. Flutuador
 | http_req_tls_handshaking | Trend | Tempo gasto em sessão TLS de handshaking com host remoto |
 | http_req_sending	| Trend	| Tempo gasto no envio de dados para o host remoto.flutuador |
