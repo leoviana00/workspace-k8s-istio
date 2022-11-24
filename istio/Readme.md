@@ -74,3 +74,7 @@
     - Tipo de Loadbalancer
     - Locality
     - Circuit Break
+
+<p align="center">
+  <img alt="Istio" src="../images/trafego-istio.png">
+</p>

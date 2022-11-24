@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img alt="Balanceador" src="../images/haproxy.png">
+  <img alt="Balanceador" src="../../images/haproxy.png">
 </p>
 
 
@@ -172,5 +172,5 @@ docker-compose restart
 - Haproxy Dashboard
 
 <p align="center">
-  <img alt="Dashboard" src="../images/lb-haproxy.png">
+  <img alt="Dashboard" src="../../images/lb-haproxy.png">
 </p>

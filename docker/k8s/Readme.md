@@ -150,7 +150,7 @@
     while true; do sleep 0.5; curl http://lab.k8s.io/lb; echo -e '\n'$(date);done
     ```
     <p align="center">
-    <img alt="lb" src="../images/istio-lb.png">
+    <img alt="lb" src="../../images/istio-lb.png">
     </p>
 
 
@@ -220,7 +220,7 @@
     ```
 
     <p align="center">
-    <img alt="hash" src="../images/consistenthash-1.png">
+    <img alt="hash" src="../../images/consistenthash-1.png">
     </p>
 
     - Requisição passando o x-user: 
@@ -229,7 +229,7 @@
     ```
 
     <p align="center">
-    <img alt="hash" src="../images/consistenthash-2.png">
+    <img alt="hash" src="../../images/consistenthash-2.png">
     </p>
 
 ## Fault Injection
@@ -239,7 +239,7 @@
     - Colocar uma injeção de falha para simular problemas no sitema
 
     <p align="center">
-    <img alt="Fault Injection" src="../images/fault-injection.png">
+    <img alt="Fault Injection" src="../../images/fault-injection.png">
     </p>
 
 ## Circuit Breaker

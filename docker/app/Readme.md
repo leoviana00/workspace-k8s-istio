@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="k8s" src="../images/docker-nginx.png">
+  <img alt="k8s" src="../../images/docker-nginx.png">
 </p>
 
 
