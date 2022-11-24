@@ -36,15 +36,14 @@
 
 ## 🚀 Ambiente
 
-0. [Levantar um balanceador Haproxy](/balanceador/Readme.md)
+0. [Levantar um balanceador Haproxy](/docker/balanceador/Readme.md)
 1. [Criar chaves ssh para o projeto](/keys/Readme.md)
 2. [Criar um hosts virtuais com vagrant e virtualbox](/vagrant/Readme.md)
 3. [Criar um cluster kubernetes com Kubespray](/kubespray/kubespray.md)
-4. [Configurações iniciais no cluster](/k8s/Readme.md)
+4. [Configurações iniciais no cluster](/k8s-dashboard/Readme.md)
 5. [Download e instalação do istio](/istio/Readme.md)
-6. [Instalação de alguns addons para ajudar no entendimento, estrutura e integridade da malha](https://istio.io/latest/docs/ops/integrations/)
-7. [Criar, conteinerizar e publicar imagens nginx para ser utilizado no deploy da demonstração de tráfego com istio](/app/Readme.md)
-8. [Praticando Gerenciamento de tráfego com o Istio](/istio/pratica.md)
+6. [Criar, conteinerizar e publicar imagens nginx para ser utilizado no deploy da demonstração de tráfego com istio](/docker/app/Readme.md)
+7. [Praticando Gerenciamento de tráfego com o Istio](/docker/k8s/Readme.md)
 
 ## 📄 Licença
 
