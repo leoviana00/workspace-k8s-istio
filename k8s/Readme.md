@@ -1,7 +1,7 @@
 <h1 align="center">Kubernetes </h1>
 
 <p align="center">
-  <img alt="k8s" src="../images/k8s-lens.jpg">
+  <img alt="k8s" src="../images/kubernetes.png">
 </p>
 
 ## Configurações
@@ -24,6 +24,68 @@
     ```
   - [Ter o lens instalado](https://k8slens.dev/)
   - Copiar o arquivo admin.conf para o lens
+
+    - Abra o lens, `files` -> `add clster`
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-1.png">
+    </p>
+
+    - Cole o conteúdo do `admin.conf` dentro do campo vazio:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-2.png">
+    </p>
+    
+    - Adicione o novo cluster:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-3.png">
+    </p>
+
+    - Listando os cluster no lens:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-4.png">
+    </p>
+
+    - Conectando ao cluster:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-5.png">
+    </p>
+
+    - Dashboard `lens`:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-6.png">
+    </p>
+
+    - Acessando as configurações do cluster adicionado:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-7.png">
+    </p>
+
+    - Renomeando cluster adicionado:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-8.png">
+    </p>
+
+    - Ativando as métricas do lens:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-9.png">
+    </p>
+    
+    - Dashboard lens com as métricas ativas:
+
+    <p align="center">
+      <img alt="k8s" src="../images/lens-10.png">
+    </p>
+    
+
 
 ## Deployments file
 
