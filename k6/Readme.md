@@ -19,7 +19,7 @@ curl -s https://dl.k6.io/key.gpg | sudo apt-key add -
 
 - HTTP GET request
 
-    - Você pode definir seu primeiro caso de teste utilizando o httpmódulo integrado. Crie um novo arquivo JavaScript em seu diretório de trabalho. Eu só vou chamá-lo script.js. Em seguida, adicione o seguinte código, que representa uma solicitação GET simples:
+    - Você pode definir seu primeiro caso de teste utilizando o http módulo integrado. Crie um novo arquivo JavaScript em seu diretório de trabalho. Eu só vou chamá-lo script.js. Em seguida, adicione o seguinte código, que representa uma solicitação GET simples:
 
     ```js
     import http from 'k6/http';
@@ -32,7 +32,7 @@ curl -s https://dl.k6.io/key.gpg | sudo apt-key add -
 
     - Cada VU um executará o código dentro da função padrão sequencialmente do início ao fim. Quando chegar ao fim, ele retornará e o processo será repetido novamente.
 
-    - É sempre uma boa ideia controlar seus VUs adicionando uma sleepinstrução no final da função padrão. Isso simula como usuários reais usam seu sistema. Você pode  definir o valor mais baixo 0.1para simular comportamentos agressivos. Se você pretende simular usuários que chamam constantemente sua API, basta remover a sleepinstrução.
+    - É sempre uma boa ideia controlar seus VUs adicionando uma sleep no final da função padrão. Isso simula como usuários reais usam seu sistema. Você pode  definir o valor mais baixo 0.1 para simular comportamentos agressivos. Se você pretende simular usuários que chamam constantemente sua API, basta remover a sleepi.
 
     - Se você não possui uma API no momento e deseja apenas testar o k6, pode usar a seguinte API de teste fornecida pelo k6:
 
