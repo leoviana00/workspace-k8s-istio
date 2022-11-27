@@ -92,3 +92,9 @@ vagrant destroy -f
 ```bash
 vagrant halt
 ```
+
+- Acesso a vm
+
+```bash
+vagrant ssh master-01
+```
